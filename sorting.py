@@ -14,6 +14,14 @@ def sequential_sort(input_list, reverse):
     return input_list
 
 
+def insertion_sort(input_list, reverse):
+    if reverse is True:
+
+    else:
+
+    return input_list
+
+
 def quick_sort(input_list):
     answer=[]
 
