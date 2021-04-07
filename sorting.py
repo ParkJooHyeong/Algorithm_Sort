@@ -16,8 +16,19 @@ def sequential_sort(input_list, reverse):
 
 def insertion_sort(input_list, reverse):
     if reverse is True:
-
+        for i in range(1, len(input_list)):
+            for j in range(i,0,-1):
+                if input_list[j]>input_list[j-1]:
+                    input_list[j], input_list[j-1] = input_list[j-1], input_list[j]
+                else:
+                    break
     else:
+        for i in range(1, len(input_list)):
+            for j in range(i,0,-1):
+                if input_list[j]<input_list[j-1]:
+                    input_list[j], input_list[j-1] = input_list[j-1], input_list[j]
+                else:
+                    break
 
     return input_list
 
