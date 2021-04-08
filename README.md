@@ -17,7 +17,7 @@
 ## 3. Quick Sort
 - 퀵 정렬
 - 시간 복잡도 : O(NlogN)
-    > N = 데이터의 개
+    > N = 데이터의 개수
 
 ## 4. Counting Sort
 - 계수 정렬
@@ -33,7 +33,7 @@
 ## 6. Heap Sort
 - 힙 정렬
 #
-###Tip
+### Tip
 Python 정렬 라이브러리
 > sorted( ), sort( )
 >   > 시간 복잡도 : O(NlogN)  
