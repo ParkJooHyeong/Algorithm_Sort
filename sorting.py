@@ -4,12 +4,12 @@ def sequential_sort(target, reverse):
         for i in range(len(input_list)-1):
             for j in range(i+1,len(input_list)):
                 if input_list[i]<input_list[j]:
-                    input_list[i], input_list[j]=input_list[j],input_list[i];
+                    input_list[i], input_list[j]=input_list[j],input_list[i]
     else:
         for i in range(len(input_list)-1):
             for j in range(i+1,len(input_list)):
                 if input_list[i]>input_list[j]:
-                    input_list[i], input_list[j]=input_list[j],input_list[i];
+                    input_list[i], input_list[j]=input_list[j],input_list[i]
 
     return input_list
 
@@ -49,7 +49,7 @@ def quick_sort(input_list, reverse, front, rear):
             while right>front and input_list[right]>=input_list[pivot]:
                 right-=1
             if left>right:
-                input_list[right], input_list[pivot] = input_list[pivot], input_list[right];
+                input_list[right], input_list[pivot] = input_list[pivot], input_list[right]
             else:
                 input_list[left], input_list[right] = input_list[right], input_list[left]
         quick_sort(input_list,reverse=False,front=front, rear=right-1)
@@ -69,7 +69,7 @@ def quick_sort(input_list, reverse, front, rear):
             while right>front and input_list[right]<=input_list[pivot]:
                 right-=1
             if left>right:
-                input_list[right], input_list[pivot] = input_list[pivot], input_list[right];
+                input_list[right], input_list[pivot] = input_list[pivot], input_list[right]
             else:
                 input_list[left], input_list[right] = input_list[right], input_list[left]
         quick_sort(input_list,reverse=True,front=front, rear=right-1)
