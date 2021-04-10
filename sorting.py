@@ -77,10 +77,37 @@ def quick_sort(input_list, reverse, front, rear):
         return input_list
 
 
-def binary_insertion_sort(input_list):
-    answer=[]
+## Divide
+def merge_sort(input_list):
+    if len(input_list)<=1:
+        return input_list
+    mid = len(input_list)//2
+    leftSide = input_list[:mid]
+    rightSide = input_list[mid:]
+    leftSide = merge_sort(leftSide)
+    rightSide = merge_sort(rightSide)
+    return merge(leftSide, rightSide)
 
-    return answer
+## Conquer
+def merge(l, r):
+    result = []
+    while len(l)>0 or len(r)>0:
+        if len(l)>0 and len(r)>0:
+            if l[0]<=r[0]:
+                result.append(l[0])
+                l = l[1:]
+            else:
+                result.append(r[0])
+                r = r[1:]
+        elif len(l)>0:
+            result.append(l[0])
+            l=l[1:]
+        elif len(r)>0:
+            result.append(r[0])
+            r=r[1:]
+    return result
+
+
 
 
 def counting_sort(input_list, reverse):
