@@ -77,6 +77,7 @@ def quick_sort(input_list, reverse, front, rear):
         return input_list
 
 
+
 ## Divide
 def merge_sort(input_list):
     if len(input_list)<=1:
@@ -87,6 +88,7 @@ def merge_sort(input_list):
     leftSide = merge_sort(leftSide)
     rightSide = merge_sort(rightSide)
     return merge(leftSide, rightSide)
+
 
 ## Conquer
 def merge(l, r):
@@ -106,8 +108,6 @@ def merge(l, r):
             result.append(r[0])
             r=r[1:]
     return result
-
-
 
 
 def counting_sort(input_list, reverse):
